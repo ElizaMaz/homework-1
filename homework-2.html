@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html  lang = "en"> 
+  <head> 
+    <meta  charset = "UTF-8" /> 
+    <meta  name = "viewport"  content ="width=device-width, initial-scale=1.0" /> 
+    <meta  http- equiv = "X-UA-Compatible"  content = "ie=edge" /> 
+    <title> Homework </title> 
+    <style>
+    body {
+      background: linear-gradient(89.9deg, rgb(208, 246, 255) 0.1%, rgb(255, 237, 237) 47.9%, rgb(255, 255, 231) 100.2%);
+      background-size: 100%;
+    
+      }
+ 
+     h1 {
+      text-align: center;
+     }
+ 
+     h1 {
+         text-align: center;
+         color: rgb(26, 6, 139);
+         font-weight: 600;
+     }  
+ 
+     h2 {
+       text-align: center;
+       color: rgb(26, 6, 139);
+       font-weight: 400;
+       font-size: 2em;
+     }
+ 
+     h3 {
+       text-align: center;
+       color: rgb(40, 38, 51);
+       font-weight: 400;
+     }
+ 
+     p {
+       font-size: 18px;
+       opacity: 0.7;
+       text-align: center;
+       font-family: monospace;
+     }
+     
+     ul {
+       margin: 10px 0;
+       padding: 0;
+     }
+ 
+     .btn {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+      display: inline-block;	
+      box-sizing: border-box;
+      padding: 0 25px;
+      margin: 0 15px 15px 0;
+      outline: none;
+      border: 1px solid #fff;
+      border-radius: 50px;
+      height: 46px;
+      line-height: 46px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #444;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+      cursor: pointer;
+      user-select: none;
+      appearance: none;
+      touch-action: manipulation;  
+      vertical-align: top;
+      transition: box-shadow 0.2s;
+  }
+ 
+  .btn:focus-visible {
+   border: 1px solid #4c51f9;
+   outline: none;
+  }
+ 
+   .btn:hover {
+   transition: all 0.2s;
+   box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+   }
+ 
+  .btn:active {
+   background-color: #808080;
+  }
+ 
+  .btn:disabled {
+   background-color: #eee;
+   border-color: #eee;
+   color: #444;
+   cursor: not-allowed;
+  }
+ 
+  li:hover,
+  li:focus-within {
+  color: rgb(23, 18, 36)!important;
+  -webkit-text-stroke: 1px #000;
+  }
+  </style>
+  </head> 
+  <body>
+   
+    <div class="Weather">
+    <h1>
+      🌈
+    </h1>
+    <h2>
+      Currently 21° in Tokyo
+    </h2>
+  <ul>
+    <h2>
+      14°/<strong>20°</strong>
+    </h2>
+    <li> 
+      <h3>
+        <span>&#9748</span>Tomorrow
+      </h3>
+      <p>10°/<strong>20°</strong></p>
+    </li>
+    <li>
+      <h3>
+        <span>&#9889</span>Saturday
+      </h3>
+      <p>15°/<strong>23°</strong></p>
+    </li>
+    <li>
+      <h3>
+        <span>&#127774</span>Sunday
+      </h3>
+      <p>16°/<strong>25°</strong></p>
+    </li>
+  </ul>  
+ <button class="btn">Change city</button>
+ <script>
+   function contactUs() { 
+
+   let city = prompt("What city do you live in?");
+   let temperature = prompt("What temperature is it?");
+   let heading1 = document.querySelector("h1");
+
+   if (temperature >= 10) {
+    heading1.innerHTML = "🌞";
+   }
+   else {
+    heading1.innerHTML = "😪";
+   }
+   
+   let h2 = document.querySelector("h2")
+    h2.innerHTML = "Currently " + temperature + "℃ in " + city + "";
+
+   }
+
+  let contactButton = document.querySelector("button");
+  contactButton.addEventListener("click", contactUs);
+</script>
+ <p>Coded by Eliza Mazurenko</p>
+  </body> 
+</html>
